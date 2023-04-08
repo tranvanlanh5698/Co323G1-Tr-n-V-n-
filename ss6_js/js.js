@@ -1,0 +1,4 @@
+
+function hienThi(){
+    alert("hello");
+}

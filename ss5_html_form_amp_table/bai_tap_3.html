@@ -2,112 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bài tập 3</title>
+    <title>Tạo form lấy survey khách hàng</title>
     <style>
-        table{
+        table {
             border-collapse: collapse;
-            width: 80%;
-            margin: 2rem auto;
+            width: 100%;
+            margin: 1rem auto;
         }
-        thead{
-            background-color: lightgray
+
+        th, td {
+            border: 1px solid whitesmoke;
         }
-        th, td{border: dimgrey
-        }
+
     </style>
 </head>
 <body>
-<from>
+<form>
+    <thead>
     <h1>Markey research survey</h1>
     <p>please take a few moments to complete this satisfation survey</p>
-    <tayble>
-           <tr>
-               <td>what is your age range</td>
-               <br>
-               <td>
-                   <select>
-                       <option>18-24</option>
-                       <option>25-35</option>
-                       <option>36-45</option>
-                       <option>46-55</option>
-                   </select>
-               </td>
-           </tr>
+    </thead>
+    <tbody>
+    <tr>What is your age range</tr>
+    <br>
+    <select>
+        <option value="18-24">18-24</option>
+        <option value="25-35">25-35</option>
+        <option value="36-45">36-45</option>
+        <option value="46-55">46-55</option>
+        <option value="56-65">56-65</option>
+    </select><br>
+    <tr>What is your yearly income gange</tr>
+    <br>
+    <select>
+        <option value="$0-$25000">$0-$25000</option>
+        <option value="$26000-$35000">$26000-$35000</option>
+        <option value="$36000-$45000">$36000-$45000</option>
+        <option value="$46000-$55000">$46000-$55000</option>
+        <option value="$56000-$65000">$56000-$65000</option>
+    </select><br>
+    <tr>
+    <tr>Gender</tr>
+    <br>
+    <input type="radio" name="Gender" value="Male" checked>Male<br>
+    <input type="radio" name="Gender" value="FeMale" checked>FeMale<br>
+    <tr>Which of the following products have your purchased in the last 2 months. Please check all that apply</tr>
+    <br>
+    </tr>
+    <tr>
+    <input type="checkbox" name="How often would you use our new product?" value="product 1" checked>product 1<br>
+    <input type="checkbox" name="How often would you use our new product?" value="product 2" checked>product 2<br>
+    <input type="checkbox" name="How often would you use our new product?" value="product 3" checked>product 3<br>
+    <tr>How often would you use our new product?</tr>
+    <br>
+    </tr>
+    </tr>
+        <input type="radio"  name="What would you pay for the new product" value="Daily" checked>Daily<br>
+        <input type="radio" name="What would you pay for the new product" value="Weekly" checked>Weekly<br>
+        <input type="radio"  name="What would you pay for the new product" value="Monthly" checked>Monthly<br>
+    <tr>What would you pay for the new product</tr>
+    <br>
+    </tr>
+    <tr>$<input>Dollas .<input>cents</tr>
+    <br>
+    <tr>What features would you like to see in the new product</tr>
+    <br>
+    <textarea rows="10" cols="100"> </textarea><br>
+    <table>
+        <tr>Please rate your level of agreement with the following statements.</tr>
+        <th></th>
+        <th>Strongly Disagree</th>
+        <th> Disagree</th>
+        <th>Agree</th>
+        <th>Strongly Agree</th>
+        <br>
         <tr>
-            <br>
-            <td>what is your yearly iocome range</td>
-            <br>
-            <td>
-                <select>
-                    <option>$0-$25000</option>
-                    <option>$26000-$35000</option>
-                    <option>$36000-$45000</option>
-                    <option>$46000-$55000</option>
-                </select>
-            </td>
+            <td>Our products are priced fairly</td>
+            <td><input type="radio" name="Our products are priced fairly" value="1">1</td>
+            <td><input type="radio" name="Our products are priced fairly" value="2">2</td>
+            <td><input type="radio" name="Our products are priced fairly" value="3">3</td>
+            <td><input type="radio" name="Our products are priced fairlyr" value="4">4</td>
         </tr>
-            <li><b>Gender</b>
-                    <li>male</li>
-                    <li>female</li>
-            </li>
         <tr>
-            <li><b>which of the following products have your putchased in the last 2 months. please check all that apply</b>
-                <li> product 1</li>
-                <li> product 2</li>
-                <li> product 3</li>
-            </li>
+            <td>Our products are high quality</td>
+            <td><input type="radio" name="Our products are high quality" value="1">1</td>
+            <td><input type="radio" name="Our products are high quality" value="2">2</td>
+            <td><input type="radio" name="Our products are high quality" value="3">3</td>
+            <td><input type="radio" name="Our products are high quality" value="4">4</td>
         </tr>
         <tr>
-            <li><b>how often would you use our new product?</b>
-            <li> daily</li>
-            <li> weekly</li>
-            <li> monthly</li>
-            </li>
-        </tr><br>
-        <tr>
-            <li><b>what would you pay for the new product</b><br>
-                <td>$</td>
-                <td>
-                    <input>.<input>
-                    <li>Dollars</li>
-                    <li>cents</li>
-                </td>
-            </li>
+            <td>You would recommend our product to a friend or coworker</td>
+            <td><input type="radio" name="You would recommend our product to a friend or coworker" value="1">1</td>
+            <td><input type="radio" name="You would recommend our product to a friend or coworker" value="2">2</td>
+            <td><input type="radio" name="You would recommend our product to a friend or coworker" value="3">3</td>
+            <td><input type="radio" name="You would recommend our product to a friend or coworker" value="4">4</td>
         </tr>
-        <tr>
-            <li><b>what features would you like to see in the new product.</b><br>
-                <input>
-            </li>
-        </tr>
-        <table>
-            <th>please rate your lever of agreement with the following statements</th><br>
-            <thead>
-            <th>strongly disagree</th>
-            <th>disagree</th>
-            <th>agree</th>
-            <th>strongly agree</th><br>
-            </thead>
-            <tbody>
-            <tr>
-                <td>our products are priced fairly</td>
-                <input type="radio" name="gender" value="1" checked>1
-                <input type="radio" name="gender" value="2" checked>2
-                <input type="radio" name="gender" value="3" checked>3
-                <input type="radio" name="gender" value="4" checked>4
-            </tr>
-            <tr>
-                <td>our products are high quality</td>
-                <input type="radio" name="gender" value="1" checked>1
-                <input type="radio" name="gender" value="2" checked>2
-                <input type="radio" name="gender" value="3" checked>3
-                <input type="radio" name="gender" value="4" checked>4
-            </tr>
-            </tbody>
-        <tr>
-
-        </tr>
-        </table>
-    </tayble>
-</from>
+    </table>
+    <tr>
+        <input type="submit" value="submit">
+    </tr>
+    </tbody>
+</form>
 </body>
 </html>

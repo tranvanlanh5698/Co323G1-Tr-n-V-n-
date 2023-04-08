@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập 3ss7</title>
+</head>
+<body>
+<form>
+   <table>
+      <tr>
+          <td>
+              <label><input type="text" id="so1" placeholder="nhập số thứ nhất"></label>
+          </td>
+          <td>
+              <label><input type="text" id="so2" placeholder="nhập số thứ hai"></label>
+          </td>
+          <td>
+              <button id="cong" type="button" onclick="sub()">cộng</button>
+          </td>
+          <td>
+              <button id="tru" type="button" onclick="sub()">trừ</button>
+          </td>
+           <td>
+               <button id="nhan" type="button" onclick="sub()">nhân</button>
+           </td>
+           <td>
+               <button id="chia" type="button" onclick="sub()">chia</button>
+           </td>
+      </tr>
+
+   </table>
+    <h2>Result</h2>
+    <div id="Result">kết quả</div>
+</form>
+</body>
+<script>
+let a=+document.getElementById('so1').value;
+let b=+document.getElementById('so2').value;
+let c=a+b
+       document.getElementById('result').innerText = c;
+</script>
+</html>

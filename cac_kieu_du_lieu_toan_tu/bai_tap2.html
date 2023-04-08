@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <thead>
+    <th>Amount</th>
+    <th>From Currency</th>
+    <th>To Currency	</th>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="text" name="Amount" id="number" value></td>
+    <td>
+        <select name="From Currency" id="promCurrency">
+            <option value="vnd">vnd</option>
+            <option value="usd">usd</option>
+        </select>
+    </td>
+    <td>
+        <select name="To Currency	" id="toCurrency">
+            <option value="usd">usd</option>
+            <option value="vnd">vnd</option>
+        </select>
+    </td>
+        <td>
+        <button type="button" onclick="moNey()">convert</button>
+        </td>
+    </tr>
+  </tbody>
+</table>
+<div id="result"></div>
+</body>
+<script>
+    function moNey() {
+        let Amount = document.getElementById("number").value;
+        let promCurrency = document.getElementById("promCurrency").value;
+        let toCurrency = document.getElementById("toCurrency").value;
+        if (promCurrency === "vnd")
+        {
+            if (toCurrency === "usd") {
+                Amount = (Amount / 23000)
+            } else {
+                Amount = Amount
+            }
+         } else {
+            if (toCurrency === "vnd") {
+                Amount = (Amount * 23000)
+            } else {
+                Amount = Amount
+            }
+        }
+            document.getElementById("result").innerText=Amount;
+        }
+</script>
+</html>

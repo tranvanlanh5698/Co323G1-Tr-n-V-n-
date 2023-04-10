@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>timf gía trị lớn nhất trong 3 số nguyên</title>
+</head>
+<body>
+<form>
+    <label><input type="number" id="number1"></label>
+    <label><input type="number" id="number2"></label>
+    <label><input type="number" id="number3"></label>
+    <button type="button" onclick="addNumber()">check</button>
+    <div id="result"></div>
+</form>
+</body>
+<script>
+    function addNumber(){
+        let number1= +document.getElementById('number1').value;
+        let number2= +document.getElementById('number2').value;
+        let number3= +document.getElementById('number3').value;
+        let max = number1
+        if ((!(number1 % 1)) && (!(number2 % 1)) && (!(number3 % 1))){
+            if (max < number2 || max < number3) {
+                if (number2 < number3) {
+                    document.getElementById('result').innerText = 'c là số lớn nhất'
+                } else {
+                    document.getElementById('result').innerText = 'b là số lớn nhất'
+                }
+            }
+            else {
+                document.getElementById('result').innerText = 'a là số lớn nhất'
+            }
+        }
+        else {
+            document.getElementById('result').innerText = 'không phải số nguyên'
+        }
+    }
+</script>
+</html>

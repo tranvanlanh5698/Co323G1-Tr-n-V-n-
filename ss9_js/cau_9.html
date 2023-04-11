@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra 3 số thực</title>
+</head>
+<body>
+<form>
+    <label><input type="number" id="numA" placeholder="nhap a"></label>
+    <label><input type="number" id="numB" placeholder="nhap b"></label>
+    <label><input type="number" id="numC" placeholder="nhap c"></label>
+    <button type="button" onclick="getValue()">check</button>
+    <div id="result"></div>
+</form>
+</body>
+<script>
+    function getValue() {
+        let numA = +document.getElementById('numA').value;
+        let numB = +document.getElementById('numB').value;
+        let numC = +document.getElementById('numC').value;
+        if ((numA > 0) && (numB > 0) && (numC > 0) && (numA + numB > numC) && (numB + numC > numA) && (numA + numC > numB)) {
+            document.getElementById('result').innerText = '3 số thực a,b,c nhập vào là cạnh của tam giac'
+        } else {
+            document.getElementById('result').innerText ='3 số thực a,b,c nhập vào không phải là cạnh của tam giac'
+        }
+    }
+</script>
+</html>

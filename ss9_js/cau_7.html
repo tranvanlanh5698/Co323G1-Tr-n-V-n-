@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giải phương trình bật 2</title>
+</head>
+<body>
+<form>
+    <label><input type="number" id="numA" placeholder="nhập a"></label>
+    <label><input type="number" id="numB" placeholder="nhập a"></label>
+    <label><input type="number" id="numC" placeholder="nhập a"></label>
+    <button type="button" onclick="getValue()">check</button>
+    <div id="result"></div>
+</form>
+</body>
+<script>
+    function getValue(){
+        let numA= +document.getElementById('numA').value;
+        let numB= +document.getElementById('numB').value;
+        let numC= +document.getElementById('numC').value;
+        let delta= Math.pow(numB,2) - 4 * numA * numC;
+        let numX1= (-numB-Math.sqrt(delta))/(2*numA);
+        let numX2= (-numB+Math.sqrt(delta))/(2*numA);
+        let numX3= (-numB)/(2*numA);
+        if (numA===0) {
+            document.getElementById('result').innerText = 'nhap lai';
+        }
+        else {
+            if (delta < 0) {
+                document.getElementById('result').innerHTML = 'phương trình vô nghiệm';
+            } else if (delta > 0) {
+                document.getElementById('result').innerHTML = 'phương trình có 2 nghiệm phân biệt x1=' + numX1 + 'x2=' + numX2;
+            } else {
+                document.getElementById('result').innerHTML = 'phương trình có nghiệm kép x1=x2=' + numX3;
+            }
+        }
+    }
+</script>
+</html>

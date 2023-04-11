@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính lải xuất ngân hàng</title>
+</head>
+<body>
+<form>
+    <label><input type="number" id="number" placeholder="nhap so tien vay"></label><br>
+    <label><input type="number" id="number1" placeholder="nhap so thang"></label><br>
+    <label><input type="number" id="number2" placeholder="nhap lai xuat hang thag"></label><br>
+    <button type="button" onclick="laiXuat()">check</button>
+    <div id="result"></div>
+</form>
+</body>
+<script>
+    function laiXuat(){
+        let number= +document.getElementById('number').value;
+        let number1= +document.getElementById('number1').value;
+        let number2= +document.getElementById('number2').value/100;
+        let laiXuat= number * Math.pow((1+ number2), number1) - number;
+        if (number>0) {
+            document.getElementById('result').innerText = laiXuat;
+        }else {
+            document.getElementById('result').innerText = 'khong co tien'
+        }
+
+    }
+</script>
+</html>

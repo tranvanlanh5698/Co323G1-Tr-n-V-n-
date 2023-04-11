@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính giá điện</title>
+</head>
+<body>
+<form>
+    <label><input type="number" id="numA" placeholder="nhap gia dien"></label>
+    <button type="button" onclick="getInfo()">check</button>
+    <div id="result"></div>
+</form>
+</body>
+<script>
+    function getInfo(){
+        let numA= +document.getElementById('numA').value;
+        let giaDien= (numA*3500)
+        if (numA>0) {
+            document.getElementById('result').innerHTML = giaDien +'vnd'
+        }else {
+            document.getElementById('result').innerHTML='khong co gia '
+        }
+    }
+</script>
+</html>

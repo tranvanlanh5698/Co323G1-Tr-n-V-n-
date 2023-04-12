@@ -20,17 +20,17 @@
         let numberB= +document.getElementById('numberB').value;
         let numberC= +document.getElementById('numberC').value;
         let numberD= +document.getElementById('numberD').value;
-        let trungBinh = ((numberA+numberB+(numberC*2)+(numberD*3))/7)
+        let trungBinh = ((numberA+numberB+(numberC*2)+(numberD*3))/7);
         if (trungBinh>=8){
-            document.getElementById('result').innerText = 'học sinh giỏi'
+            document.getElementById('result').innerText = 'học sinh giỏi';
         }else if(trungBinh>=6.5){
-            document.getElementById('result').innerText = 'học sinh khá'
+            document.getElementById('result').innerText = 'học sinh khá';
         }else if(trungBinh>=4){
-            document.getElementById('result').innerText = 'học sinh trung bình'
+            document.getElementById('result').innerText = 'học sinh trung bình';
         }else if(trungBinh>=2){
-            document.getElementById('result').innerText = 'học sinh yếu'
-        }else if(trungBinh<2) {
-            document.getElementById('result').innerText = 'học sinh kém'
+            document.getElementById('result').innerText = 'học sinh yếu';
+        }else  {
+            document.getElementById('result').innerText = 'học sinh kém';
         }
     }
 </script>

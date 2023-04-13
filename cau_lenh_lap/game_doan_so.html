@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game đoán số</title>
+</head>
+<body>
+<script>
+        let num=+prompt("Số bé nhất là bao nhiêu?");
+        let number = +prompt("Số lớn nhất là bao nhiêu?");
+        let num2 = +Math.floor(Math.random()  * (number - num) + num);
+        let number_check = +prompt ("Nhập số bạn đoán");
+        let count = 0;
+        for (let i = 0;; i++) {
+            if (number_check === num2) {
+                document.write('Bạn đã dự đoán đúng');
+                break;
+            } else {
+                prompt('Đoán Lại');
+            }
+            count++;
+            if (count >= 4) {
+                document.write('Bạn đã hết lượt đoán');
+                break;
+            }
+        }
+</script>
+</body>
+</html>

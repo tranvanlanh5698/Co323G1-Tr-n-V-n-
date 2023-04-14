@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+    let str = ['t', 'R', 'A', 'N', 'v', 'A', 'N', 'l', 'A', 'N', 'H'];
+    let so1 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let so2 = 'abcdefghijklmnopqrstuvwxyz';
+    let chuSo = [];
+    for (let x = 0; x < str.length; x++) {
+        if (so1.indexOf(str[x]) !== -1) {
+            chuSo.push(str[x].toLowerCase());
+        } else if (so2.indexOf(str[x]) !== -1) {
+            chuSo.push(str[x].toUpperCase());
+        } else {
+            chuSo.push(str[x]);
+        }
+    }
+    document.write(chuSo.join(''));
+</script>
+</body>
+</html>

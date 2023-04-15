@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 7</title>
+</head>
+<body>
+<script>
+    let num1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let num = +prompt("nhap 1 so nghuyen");
+    for (let i = 0; i < num1.length; i++) {
+        if (num === num1[i]) {
+            num1.splice(i, 1);
+            num1.push(0);
+        }
+    }
+    document.write(num1);
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 5</title>
+</head>
+<body>
+<form>
+    <label>nhập từ <input type="text" id="word"></label>
+    <button type="button" onclick="getStar()">check</button>
+    <div id="result"></div>
+</form>
+<script>
+    function getStar() {
+        let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let star2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let word = document.getElementById("word").value;
+        let index = -1;
+        for (let i = 0; i < star.length; i++) {
+            if (word === star[i]) {
+                index = i;
+                break;
+            }
+        }
+
+        if (index === -1) {
+            document.write('nhap lai');
+        } else {
+            document.write(star2[index]);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 7</title>
+</head>
+<body>
+<script>
+    let a = +prompt('nhap so a');
+    let b = +prompt('nhap so b')
+    getNumber(a, b);
+
+    function getNumber(a, b) {
+        let num = a;
+        a = b;
+        b = num;
+        return [a, b];
+    }
+
+    const result = getNumber(a, b)
+    a = result[0];
+    b = result[1];
+    document.write('sau khi doi cho : ' + a + ',' + b);
+</script>
+</body>
+</html>

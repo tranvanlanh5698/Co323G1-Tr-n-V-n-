@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<label><input type="number" id="number"></label>
+<button type="button" onclick="getNumber()">check</button>
+<div id="result"> ket qua</div>
+<script>
+    function getNumber() {
+        let number = +document.getElementById('number').value;
+        let giaiThua = number;
+        for (let i = 1; i < number; i++) {
+            giaiThua = giaiThua * i;}
+        document.write("kết quả " + giaiThua);
+    }
+</script>
+</body>
+</html>

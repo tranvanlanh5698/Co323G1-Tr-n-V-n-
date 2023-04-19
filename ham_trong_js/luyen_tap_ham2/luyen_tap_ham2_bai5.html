@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 5</title>
+</head>
+<body>
+<script>
+    getNumber();
+
+    function getNumber() {
+        let num1 = +prompt('nhap so a');
+        let num2 = +prompt('nhap so b');
+        let num3 = +prompt('mhap so c');
+        if (num1 % 1 === 0 && num2 % 1 === 0 && num3 % 1 === 0) {
+            if (num1 < num2 && num1 < num3) {
+                document.write('gia tri nho nhat la : ' + num1);
+            } else {
+                if (num2 > num3) {
+                    document.write('gia tri nho nhat la : ' + num3);
+                } else {
+                    document.write('gia tri nho nhat la : ' + num2);
+                }
+
+            }
+        } else {
+            document.write('ko phai so');
+        }
+    }
+</script>
+</body>
+</html>

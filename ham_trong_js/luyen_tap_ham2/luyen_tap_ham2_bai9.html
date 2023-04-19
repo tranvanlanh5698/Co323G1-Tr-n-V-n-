@@ -5,8 +5,29 @@
     <title>bai 9</title>
 </head>
 <body>
-
+<script>
+    let num = prompt("nhap ky tu muon kiem tra: ");
+    checkNumber(num);
+    function checkNumber(num) {
+        let arr = [];
+        let count = 0;
+        let N = +prompt("do dai mang: ");
+        for (let i = 0; i < N; i++) {
+            arr[i] = prompt("ky tu " + i);
+        }
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] === num) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            document.write(" -1");
+            return -1;
+        } else {
+            document.write("so lan xuat hien " + count + 'lan');
+        }
     }
+
 
 </script>
 </body>

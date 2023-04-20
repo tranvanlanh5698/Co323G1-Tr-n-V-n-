@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+class Temperature{
+    constructor(c) {
+        this.degree=c;
+    }
+    convertDoF(){
+        let doF= 9/5*this.degree+32;
+        return doF;
+    }
+    convertDoK(){
+        let doK= this.degree + 273.15;
+        return doK;
+    }
+}
+let myTemperature= new Temperature(25)
+let doF = myTemperature.convertDoF();
+document.write('<br>' + "độ f = " + doF+'độ');
+let doK = myTemperature.convertDoK();
+document.write('<br>' + "độ k = " + doK+'độ');
+</script>
+</body>
+</html>

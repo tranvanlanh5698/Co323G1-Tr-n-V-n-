@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if va switch case</title>
+</head>
+<body>
+<label><input type="number" id="number1" placeholder="nhap tien luong"></label>
+<button type="button" onclick="getNumber()">check</button>
+<div id="result"></div>
+
+</body>
+<script>
+    function getNumber() {
+        let number1 = document.getElementById('number1').value;
+        if (number1 <= 7000000) {
+            let thue = ((number1 * 5) / 100);
+            let luongRong = number1 - thue;
+            document.getElementById('result').innerHTML = "thue la: " + thue + 'vnd' + 'luong rong la: ' + luongRong + 'vnd';
+        } else if (number1 <= 15000000) {
+            let thue = ((number1 * 10) / 100);
+            let luongRong = number1 - thue;
+            document.getElementById('result').innerHTML = thue + 'vnd' + 'luong rong la: ' + luongRong + 'vnd';
+        } else if (number1 > 15000000) {
+            let thue = ((number1 * 20) / 100);
+            let luongRong = number1 - thue;
+            document.getElementById('result').innerHTML = thue + 'vnd' + 'luong rong la: ' + luongRong + 'vnd';
+        }
+    }
+
+</script>
+</html>

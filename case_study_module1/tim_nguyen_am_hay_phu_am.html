@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tim nguyen am </title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập ký tự");
+    if (n === 'a' || n === 'A' || n === 'e' || n === 'E' || n === 'i' || n === 'I' || n === 'o' || n === 'O' || n === 'u' || n === 'U') {
+        document.write(n + " là ký tự nguyên âm");
+    } else if ((n >= 'a' && n <= 'z') || (n >= 'A' && n <= 'Z')) {
+        document.write(n + " là phụ âm");
+    } else {
+        document.write("vui lòng nhập lại");
+    }
+</script>
+</body>
+</html>

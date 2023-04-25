@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+    let tu = [2, 5, 7];
+    let mau = [3, 6, 8];
+    let max = tu[0] / mau[0];
+    let index = 0;
+    for (let i = 0; i < mau.length; i++) {
+        if (tu[i] / mau[i] > max) {
+            max = tu[i] / mau[i];
+            index = i;
+        }
+    }
+    document.write(max + '');
+    document.write('vi tri cua phan so la ' + index);
+</script>
+</body>
+</html>

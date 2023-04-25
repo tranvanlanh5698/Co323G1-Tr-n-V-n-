@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 4</title>
+</head>
+<body>
+<script>
+
+    let str = `
+        MENU:
+        1. Cafe
+        2. cam vat
+        3. Nuoc ep ca rot
+        4. Nuoc ep ca chua
+        5. nuoc loc
+        6. nuoc dua
+        7. thoat goi mon
+    `;
+    let option;
+    do {
+        option = +prompt('nhap lua chon cua ban' + str);
+    } while (option > 0 || option < 7);
+    switch (option) {
+        case 1:
+            document.write('lua chon cua ban la cafe');
+            break;
+        case 2:
+            document.write('lua chon cua ban la cam vat');
+            break;
+        case 3:
+            document.write('lua chon cua ban la  Nuoc ep ca rot');
+            break;
+        case 4:
+            document.write('lua chon cua ban la Nuoc ep ca chua');
+            break;
+        case 5:
+            document.write('lua chon cua ban la nuoc loc');
+            break;
+        case 6:
+            document.write('lua chon cua ban la nuoc dua');
+            break;
+        case 7:
+            document.write('lua chon cua ban la thoat goi mon');
+            break;
+    }
+</script>
+</body>
+</html>

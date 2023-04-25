@@ -6,7 +6,15 @@
 </head>
 <body>
 <script>
-  
+    let a = [1, 2, 3, 4, 5];
+    let b = [1, 2, 0, 3, 4, 5, 6, 7, 0, 8];
+    let c = [];
+    for (let i = 0; i < b.length; i++) {
+        if (!a.includes(b[i]) && !c.includes(b[i])) {
+            c.push(b[i]);
+        }
+    }
+    document.write(c + '')
 </script>
 </body>
 </html>

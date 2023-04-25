@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-
+    let prices = [15000, 20000, 18000, 18000, 5000, 25000];
     let str = `
         MENU:
         1. Cafe
@@ -18,32 +18,48 @@
         7. thoat goi mon
     `;
     let option;
+    let a1 = 0;
+    let myMenu = "";
     do {
         option = +prompt('nhap lua chon cua ban' + str);
-    } while (option > 0 || option < 7);
-    switch (option) {
-        case 1:
-            document.write('lua chon cua ban la cafe');
-            break;
-        case 2:
-            document.write('lua chon cua ban la cam vat');
-            break;
-        case 3:
-            document.write('lua chon cua ban la  Nuoc ep ca rot');
-            break;
-        case 4:
-            document.write('lua chon cua ban la Nuoc ep ca chua');
-            break;
-        case 5:
-            document.write('lua chon cua ban la nuoc loc');
-            break;
-        case 6:
-            document.write('lua chon cua ban la nuoc dua');
-            break;
-        case 7:
-            document.write('lua chon cua ban la thoat goi mon');
-            break;
-    }
+        let quantity = 0;
+
+        switch (option) {
+            case 1:
+
+                quantity = +prompt('nhap so luong can order');
+                myMenu += "Cafe : so luong " + quantity + "\n";
+                a1 += quantity * prices[option - 1];
+                break;
+            case 2:
+                quantity = +prompt('nhap so luong can order');
+                myMenu += "cam vat : so luong " + quantity + "\n";
+                a1 += quantity * prices[option - 1];
+                break;
+            case 3:
+                quantity = +prompt('nhap so luong can order');
+                myMenu += "Nuoc ep ca rot : so luong " + quantity + "\n";
+                a1 += quantity * prices[option - 1];
+                break;
+            case 4:
+                quantity = +prompt('nhap so luong can order');
+                myMenu += "Nuoc ep ca chua : so luong " + quantity + "\n";
+                a1 += quantity * prices[option - 1];
+                break;
+            case 5:
+                quantity = +prompt('nhap so luong can order');
+                myMenu += "nuoc loc : so luong " + quantity + "\n";
+                a1 += quantity * prices[option - 1];
+                break;
+            case 6:
+                quantity = +prompt('nhap so luong can order');
+                myMenu += "nuoc dua : so luong " + quantity + "\n";
+                a1 += quantity * prices[option - 1];
+                break;
+        }
+    } while (0 <= option && option <= 6);
+
+    document.write(myMenu + "<br>" + "Tong so tien: " + a1)
 </script>
 </body>
 </html>

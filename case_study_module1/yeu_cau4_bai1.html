@@ -8,14 +8,37 @@
 
 <script>
     let str = prompt('nhap xau ky tu');
-    let 
-    getName(str)
-    function getName(str) {
-        for (let i = 0; i < str.length ; i++) {
 
+    alert(getName(str))
+
+    function getName(str) {
+        let arr = str.toLocaleLowerCase().split(" ");
+        let chuSo = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] !== '') {
+                chuSo.push(arr[i])
+            }
         }
+        let chuSo2 = [];
+        for (let j = 0; j < chuSo.length; j++) {
+            let chu = chuSo[j].charAt(0).toUpperCase() + chuSo[j].slice(1);
+            chuSo2.push(chu);
+        }
+        return (chuSo2.join(' '));
     }
 
+    function findMaxLengt(str) {
+        let arr = str.split(" ")
+        let max = '';
+        for (let x = 0; x < arr.length; x++) {
+            if (max.length < arr[x].length) {
+                max = arr[x];
+            }
+        }
+        return max;
+    }
+
+    alert(findMaxLengt(str));
 </script>
 </body>
 </html>

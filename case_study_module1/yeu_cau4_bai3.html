@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+    let s1 = prompt('nhap mang ky tu');
+    let s2 = prompt('nhap mang ky tu 2');
+    getCharacters(s1, s2);
+
+    function getCharacters(s1, s2) {
+        let arr = s1.split("");
+        let array = s2.split("");
+        let s3 = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j <array.length ; j++) {
+                if (arr[i]===array[j]){
+                    s3.push(arr[i]);
+                    arr.splice(i)
+                }
+            }
+        }alert(s3.length)
+    }
+</script>
+</body>
+</html>

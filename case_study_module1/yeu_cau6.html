@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>yue cau 6</title>
+</head>
+<body>
+<button id="bnt-add" onclick="getAdd()">thêm mới học viên</button>
+<button id="bnt-edit" onclick="getEdit()">sửa thông tin học viên</button>
+<button id="bnt-delete" onclick="getDelete()">xóa học viên</button>
+<p id="result"></p>
+<script>
+    class student {
+        constructor(id, name, classs, gmail, date, module) {
+            this.id = id;
+            this.name = name;
+            this.classs = classs;
+            this.gmail = gmail;
+            this.date = date;
+            this.module = module;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setClasss(classs) {
+            this.classs = classs;
+        }
+
+        setGmail(gmail) {
+            this.gmail = gmail;
+        }
+
+        setDate(date) {
+            this.date = date;
+        }
+
+        setModule(module) {
+            this.module = module;
+        }
+
+        getId(id) {
+            return this.id;
+        }
+
+        getName(name) {
+            return this.name;
+        }
+
+        getClasss(classs) {
+            return this.classs;
+        }
+
+        getGmail(gmail) {
+            return this.gmail;
+        }
+
+        getDate(date) {
+            return this.date;
+        }
+
+        getModule(module) {
+            return this.module;
+        }
+
+    }
+
+    let studentList = [];
+    let student1 = new student("0001", "Nguyễn Văn A", "C1022G1", "nguyenvana@gmail.com", "12/4/1998", "1");
+    let student2 = new student("0002", "Nguyễn Văn B", "C1022G1", "nguyenvanb@gmail.com", "2/7/1996", "1");
+    let student3 = new student("0003", "Nguyễn Văn C", "C1022G1", "nguyenvanc@gmail.com", "20/10/1999", "1");
+    studentList.push(student1, student2, student3);
+    display(studentList);
+
+    function
+    display(list) {
+        studentList.sort(function (c1, c2) {
+            return c1.id - c2.id;
+        })
+        let tableString = '<table border="1" style="border-collapse: collapse">\n' +
+            '   <tr>\n' +
+            '       <th>stt</th>\n' +
+            '       <th>id</th>\n' +
+            '       <th>Name</th>\n' +
+            '       <th>classs</th>\n' +
+            '       <th>gmail</th>\n' +
+            '       <th>date</th>\n' +
+            '       <th>module</th>\n' +
+            '   </tr>';
+        for (let i = 0; i < list.length; i++) {
+            tableString += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + 'HV-' + list[i].getId() + '</td>\n' +
+                '        <td>' + list[i].getName() + '</td>\n' +
+                '        <td>' + list[i].getClasss() + '</td>\n' +
+                '        <td>' + list[i].getGmail() + '</td>\n' +
+                '        <td>' + list[i].getDate() + '</td>\n' +
+                '        <td>' + list[i].getModule() + '</td>\n' +
+                '    </tr>'
+        }
+        tableString += '</table>'
+        document.getElementById('result').innerHTML = tableString;
+    }
+
+    function getAdd() {
+        let id;
+        let checkNum;
+        let checkLength;
+        do {
+            id = prompt('nhập id ');
+            checkNum = isNaN(id);
+            checkLength = id.length===4;
+        } while (checkNum||!checkLength);
+        let name;
+        do {
+            name = prompt('nhập tên');
+        } while (name.length <= 0 || name.length >= 10);
+
+        let classs = prompt('nhập lớp');
+        let gmail = prompt('nhập gmail');
+        let date = prompt('nhập ngày tháng năm sinh');
+        let module;
+        do {
+            module = +prompt('nhap module');
+        } while (0 > module || module > 6);
+
+        let newStudent = new student(id, name, classs, gmail, date, module);
+        studentList.push(newStudent);
+        display(studentList);
+    }
+
+    function getDelete() {
+        let id = prompt('nhập id muốn xóa');
+        let flag = false;
+        let index = 0;
+        for (let i = 0; i < studentList.length; i++) {
+            if (id === studentList[i].id) {
+                flag = true;
+                index = i;
+                break;
+            }
+        }
+        if (flag) {
+            let conf = confirm("bạn có muốn xóa học viên không???");
+            if (conf) {
+                studentList.splice(index, 1);
+            }
+        } else {
+            alert('id không tồn tại');
+        }
+        display(studentList)
+    }
+
+    function getEdit() {
+        let edit = prompt('id cần sửa chữa');
+        for (let i = 0; i < studentList.length; i++) {
+            if (edit === studentList[i].getId()) {
+                studentList[i].setId(edit);
+                let id = prompt('nhập id');
+                if (id !== '') {
+                    studentList[i].setId(id);
+                }
+                let name = prompt('nhập tên học viên');
+                if (name !== '') {
+                    studentList[i].setName(name);
+                }
+                let classs = prompt('nhập lớp');
+                if (classs !== '') {
+                    studentList[i].setClasss(classs);
+                }
+                let gmail = prompt('nhập gmail');
+                if (gmail !== '') {
+                    studentList[i].setGmail(gmail);
+                }
+                let date = prompt('nhập ngày tháng năm sinh');
+                if (date !== '') {
+                    studentList[i].setDate(date);
+                }
+                let module = prompt('nhập ngày tháng năm sinh');
+                if (module !== '') {
+                    studentList[i].setModule(module);
+                }
+            }
+            display(studentList);
+        }
+    }
+
+
+</script>
+</body>
+</html>

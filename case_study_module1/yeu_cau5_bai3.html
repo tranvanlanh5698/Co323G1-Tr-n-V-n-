@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+    let num = +prompt('nhap so luong mang');
+    let num2 = +prompt('nhap do dai mang');
+    let number = new Array(num);
+    for (let i = 0; i < num; i++) {
+        number[i] = new Array(num2);
+        for (let j = 0; j < number[i].length; j++) {
+            number[i][j] = prompt('nhap phan tu thu' + j + 'cua mang' + i);
+        }
+    }
+    function maxNumber(number){
+    let max=number[0][0];
+        for (let i = 0; i <number.length ; i++) {
+            for (let j = 0; j < number[i].length; j++) {
+                if (max<number[i][j]){
+                    max=number[i][j];
+                }
+            }
+        }return max;
+    }
+    function minNumber(number){
+        let min=number[0][0];
+        for (let i = 0; i <number.length ; i++) {
+            for (let j = 0; j < number[i].length; j++) {
+                if (min>number[i][j]){
+                    min=number[i][j];
+                }
+            }
+        }return min;
+    }
+    alert("so lon nhat la: "+maxNumber(number));
+    alert("so be nhat la: "+minNumber(number))
+</script>
+</body>
+</html>

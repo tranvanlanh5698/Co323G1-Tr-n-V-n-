@@ -124,6 +124,7 @@
         let classs = prompt('nhập lớp');
         let gmail = prompt('nhập gmail');
         let date = prompt('nhập ngày tháng năm sinh');
+      //  getDate(date);
         let module;
         do {
             module = +prompt('nhap module');
@@ -133,6 +134,19 @@
         studentList.push(newStudent);
         display(studentList);
     }
+    // function getDate(date){
+    //    let number=date.split("/");
+    //    let lengthN = number.length;
+    //    if (lengthN !== 3) {
+    //        return false;
+    //    }
+    //    let day = number[0];
+    //
+    //    let month= number[1];
+    //    let year= number[2];
+    //
+
+
 
     function getDelete() {
         let id = prompt('nhập id muốn xóa');

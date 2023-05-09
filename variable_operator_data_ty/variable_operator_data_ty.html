@@ -1,10 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>variable_operator_data_tye</title>
+    <style>
+        form {
+            border: 1px solid;
+            width: 500px;
+            height: 400px;
+            text-align: center;
+            background-color: maroon;
+        }
+        h1 {
+            background-color: #220000;
+        }
+        div {
+            background-color: white;
+            border: 1px;
+            width: 400px;
+            height: 350px;
+        }
+    </style>
 </head>
 <body>
-$END$
+<form style="width: 480px;height: 520px;text-align: center; background-color: maroon; margin-left: 300px">
+    <div style="width:400px;height: 480px;text-align: center;background-color: white; margin-left: 40px; border-radius: 5px">
+        <h1 style="color: white; background-color: #220000">TIP CALCULATOR</h1>
+
+        <p t>How much was your bill? </p>
+        $<input  type="number" name="monney">
+        <p>How was your service?</p>
+        <select style="width: 180px; height: 50px" name="num" >
+            <option id="outstanding">Outstanding: 30%</option>
+            <option id="good">Good: 20%</option>
+            <option id="ok">It was OK: 15%</option>
+            <option id="bad">BAD: 10%</option>
+            <option id="terrible">Terrible: 5%</option>
+        </select><br>
+        <p>How many people are sharing the bill?</p>
+        <input type="number">people<br><br>
+        <button type="button" style="width:100px;height: 10%;;background-color: maroon; color: white">CALCULATOR!
+        </button>
+        <h2>TIP AMOUNT</h2>
+        <output name="output">$</output>
+        <h4>each</h4>
+    </div>
+</form>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+<script>
+    let n = +prompt('nhap thang');
+    let m = +prompt('nhap nam');
+
+    switch (n) {
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            document.write("thang : " + n + " co 30 ngay");
+            break;
+        case 2:
+            if ((m % 4 === 0 && m % 100 !== 0 && m % 400 !== 0) || (m % 100 === 0 && m % 400 === 0)) {
+                document.write("thang : " + n + " co 29 ngay");
+            } else {
+                document.write("thang : " + n + " co 28 ngay");
+            }
+            break;
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            document.write("thang : " + n + " co 31 ngay");
+    }
+
+</script>
+</body>
+</html>

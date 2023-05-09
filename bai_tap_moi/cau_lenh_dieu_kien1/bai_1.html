@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhap canh a");
+    let b = +prompt('nhap canh b');
+    let c = +prompt('nhap canh c');
+    if (a <= 0 || b <= 0 || c <= 0 && a + b > c || b + c > a || a + c > b) {
+        alert("khong phai la tam giac");
+    } else if (a * a + b * b === c * c || a * a + c * c === b * b || b * b + c * c === a * a) {
+        if (a === b || a === c || b === c) {
+            alert("la tam giac vuong can");
+        }
+    }else {
+        alert("khong phai tam giac vuong can");
+    }
+
+
+</script>
+</body>
+</html>

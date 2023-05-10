@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>chuyen doi tien te</title>
 </head>
 <body>
-$END$
+
+<h3> ứng dụng chuyển đổi tiền tệ</h3>
+<tr>
+    <th><input type="text" name="num" id="currency"></th>
+    <td>
+        <select name="from" id="from">
+            <option value="23462.50">vnd(viet nam)</option>
+            <option value="1">usd(do la)</option>
+            <option value="135.40">jpy(yen nhat)</option>
+            <option value="6.93">rmb(nhan dan te)</option>
+            <option value="0.79">gbp(ban anh)</option>
+        </select>
+    </td>
+    <td>
+        <select name="to" id="to">
+            <option value="23462.50">vnd(viet nam)</option>
+            <option value="1">usd(do la)</option>
+            <option value="135.40">jpy(yen nhat)</option>
+            <option value="6.93">rmb(nhan dan te)</option>
+            <option value="0.79">gbp(ban anh)</option>
+        </select>
+    </td>
+    <br><br>
+    <td>
+        <button type="button" onclick="money()">check</button>
+        <div id="result"></div>
+    </td>
+</tr>
+
+
+<script>
+    function money() {
+        let m = document.getElementById("currency").value;
+        let f = document.getElementById("from").value;
+        let t = document.getElementById("to").value;
+        let r = (m * t) / f;
+        document.getElementById("result").innerHTML = "giai tri la: " + r;
+    }
+</script>
 </body>
 </html>

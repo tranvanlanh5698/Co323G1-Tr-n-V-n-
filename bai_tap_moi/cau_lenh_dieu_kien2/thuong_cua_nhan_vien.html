@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+<label><input type="number" id="number1" placeholder="nhap luong"></label>
+<label><input type="number" id="number2" placeholder="nhap thoi gian"></label>
+<button type="button" onclick="getNumber()">check</button>
+<div id="result"></div>
+<script>
+    function getNumber() {
+        let number1 = document.getElementById('number1').value;
+        let number2 = document.getElementById('number2').value;
+        if (number2 >= 200) {
+            let bonus = ((number1 * 20) / 100);
+            let salary = number1 + bonus;
+            document.getElementById('result').innerHTML = "tien thuong la: " + bonus + ' vnd' + " luong sau thuong la: " + salary + ' vnd';
+        } else if (number2 < 200 && number2 >= 100) {
+            let bonus = ((number1 * 10) / 100);
+            let salary = number1 + bonus;
+            document.getElementById('result').innerHTML = "tien thuong la: " + bonus + ' vnd' + " luong sau thuong la: " + salary + ' vnd';
+        } else if (number2 < 100) {
+            let salary = (number1);
+            document.getElementById('result').innerHTML = "tien luong la: " + salary + ' vnd'
+        }
+    }
+</script>
+</body>
+</html>

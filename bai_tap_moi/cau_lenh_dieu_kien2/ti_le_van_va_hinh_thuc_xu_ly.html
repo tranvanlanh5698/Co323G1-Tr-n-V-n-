@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<label><input type="number" id="number1" placeholder="nhap tong so buoi cua module"></label>
+<label><input type="number" id="number2" placeholder="nhap so buoi van"></label>
+<button type="button" onclick="getNumber()">check</button>
+<div id="result"></div>
+<script>
+    function getNumber() {
+        let a = document.getElementById('number1').value;
+        let b = document.getElementById('number2').value;
+        let c = (b / a) * 100;
+        if (c >= 20) {
+            document.getElementById('result').innerHTML = 'ti le nghi la: ' + c + '%' + ' ban buoc phai chuyen lop';
+        } else if (c<20&&c>=10) {
+            document.getElementById('result').innerHTML = 'ti le nghi la: ' + c + '%' + ' ban nghi hoi nhieu can xem lai';
+        } else if (c < 10) {
+            document.getElementById('result').innerHTML = 'ti le nghi la: ' + c + '%' + ' binh thuong';
+        }
+    }
+</script>
+</body>
+</html>

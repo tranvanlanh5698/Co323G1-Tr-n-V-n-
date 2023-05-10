@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tim tuoi cha con</title>
+</head>
+<body>
+<script>
+    let m = +prompt('nhap tuoi cha');
+    let n = +prompt('nhap tuoi con');
+    if (m - n >= 25) {
+        for (let i = 0; ; i++) {
+            if ((m + i) === ((n + i) * 2)) {
+                document.write("Can " + i + " nam nua thi tuoi cha gap doi tuoi con");
+                break;
+            }
+        }
+    } else {
+        document.write("tuoi cha hon tuoi con thấp hơn 25 ");
+    }
+</script>
+</body>
+</html>

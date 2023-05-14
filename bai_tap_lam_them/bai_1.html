@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
 </head>
 <body>
-$END$
+<script>
+    let n = +prompt("nhap chieu cao")
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n; j++) {
+            if (i !== j) {
+                document.write("*");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
 </body>
 </html>

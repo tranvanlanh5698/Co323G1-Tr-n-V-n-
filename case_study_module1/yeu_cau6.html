@@ -86,7 +86,7 @@
             '   <tr>\n' +
             '       <th>stt</th>\n' +
             '       <th>id</th>\n' +
-            '       <th>Name</th>\n' +
+            '       <th>name</th>\n' +
             '       <th>classs</th>\n' +
             '       <th>gmail</th>\n' +
             '       <th>date</th>\n' +
@@ -119,12 +119,12 @@
         let name;
         do {
             name = prompt('nhập tên');
-        } while (name.length <= 0 || name.length >= 10);
+        } while (name.length <= 0 || name.length >= 50);
 
         let classs = prompt('nhập lớp');
         let gmail = prompt('nhập gmail');
         let date = prompt('nhập ngày tháng năm sinh');
-      //  getDate(date);
+
         let module;
         do {
             module = +prompt('nhap module');
@@ -134,20 +134,6 @@
         studentList.push(newStudent);
         display(studentList);
     }
-    // function getDate(date){
-    //    let number=date.split("/");
-    //    let lengthN = number.length;
-    //    if (lengthN !== 3) {
-    //        return false;
-    //    }
-    //    let day = number[0];
-    //
-    //    let month= number[1];
-    //    let year= number[2];
-    //
-
-
-
     function getDelete() {
         let id = prompt('nhập id muốn xóa');
         let flag = false;
@@ -163,11 +149,11 @@
             let conf = confirm("bạn có muốn xóa học viên không???");
             if (conf) {
                 studentList.splice(index, 1);
+            }else {
+                alert('id không tồn tại');
             }
-        } else {
-            alert('id không tồn tại');
         }
-        display(studentList)
+        display(studentList);
     }
 
     function getEdit() {

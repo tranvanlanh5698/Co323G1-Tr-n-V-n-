@@ -8,16 +8,18 @@
 <script>
     let num = [13, 45, 3, 5, 6, 8, 34, 24, 36, 5];
     let max = num[0];
-    let trungBinh = num[0];
+    let tong = num[0];
+    let trungBinh1 = 0;
     document.write(num + '<br>');
     for (let i = 1; i < num.length; i++) {
         if (max < num[i]) {
             max = num[i];
         }
-        trungBinh = trungBinh + num[0];
+        tong = tong + num[i];
     }
+    trungBinh1 =tong/num.length
     document.write('so lon nhat la :' + max + '<br>');
-    document.write('trung bình của các số là :' + (trungBinh / num.length));
+    document.write('trung bình của các số là :' + trungBinh1);
 </script>
 </body>
 </html>

@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
 </head>
 <body>
-$END$
+<script>
+    let num = +prompt("nhap thang can kiem tra");
+    let number = +prompt("nhap nam can kiem tra");
+
+            switch (num) {
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.write("thang " + num + " co 30 ngay");
+                    break;
+                case 2:
+                    if ((number % 4 === 0 && number % 100 !== 0 && number % 400 !== 0) || (number % 100 === 0 && number % 400 === 0)) {
+                        document.write("thang " + num + " co 29 ngay");
+                    } else {
+                        document.write("thang " + num + " co 28 ngay")
+                    }
+                    break;
+                case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+                    document.write("thang "+num+" co 31 ngay")
+            }
+
+</script>
 </body>
 </html>

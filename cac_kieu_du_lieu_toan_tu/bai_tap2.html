@@ -13,7 +13,7 @@
     </thead>
     <tbody>
     <tr>
-        <td><input type="text" name="Amount" id="number" value></td>
+        <td><input type="text" name="amount" id="number" value></td>
     <td>
         <select name="From Currency" id="promCurrency">
             <option value="vnd">vnd</option>
@@ -23,11 +23,11 @@
     <td>
         <select name="To Currency	" id="toCurrency">
             <option value="usd">usd</option>
-            <option value="vnd">vndsss
+            <option value="vnd">vnd
         </select>
     </td>
         <td>
-        <button type="button" onclick="moNey()">convert</button>
+        <button type="button" onclick="money()">convert</button>
         </td>
     </tr>
   </tbody>
@@ -35,25 +35,24 @@
 <div id="result"></div>
 </body>
 <script>
-    function moNey() {
-        let Amount = document.getElementById("number").value;
-        let promCurrency = document.getElementById("promCurrency").value;
-        let toCurrency = document.getElementById("toCurrency").value;
-        if (promCurrency === "vnd")
-        {
-            if (toCurrency === "usd") {
-                Amount = (Amount / 23000)
+    function money() {
+        let amount = +document.getElementById("number").value;
+        let promCurrency = +document.getElementById("promCurrency").value;
+        let toCurrency = +document.getElementById("toCurrency").value;
+        if (promCurrency == "vnd") {
+            if (toCurrency == "usd") {
+                amount = (amount / 23000);
             } else {
-                Amount = Amount
+                 amount = amount
             }
          } else {
-            if (toCurrency === "vnd") {
-                Amount = (Amount * 23000)
+            if (toCurrency == "vnd") {
+               amount = (amount * 23000);
             } else {
-                Amount = Amount
+                amount = amount
             }
         }
-            document.getElementById("result").innerText=Amount;
+            document.getElementById("result").innerText= amount;
         }
 </script>
 </html>

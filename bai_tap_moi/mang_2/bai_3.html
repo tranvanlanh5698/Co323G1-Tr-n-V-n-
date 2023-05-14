@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra phan tu trong mang</title>
+</head>
+<body>
+<script>
+    let m = +prompt('nhap chieu dai mang');
+    let arr = [];
+    for (let i = 0; i < m;) {
+        arr[i] = prompt('nhap phan tu');
+        let flag = false;
+        for (let j = 0; j < i; j++) {
+            if (arr[i] === arr[j]){
+             alert("nhap lai")
+                flag = true;
+                break;
+            }
+        }
+        if(!flag) {
+            i++;
+        }
+    }
+    document.write(arr+'')
+</script>
+</body>
+</html>

@@ -8,12 +8,13 @@
 <label><input type="number" id="banKinh"></label>
 <button type="button" onclick="getNumber()">check</button>
 <div id="result">ket qua la</div>
-<script>function getNumber() {
-    let banKinh = +document.getElementById('banKinh').value;
-    dienTich = (banKinh * banKinh) * 3.14;
-    chuVi = (banKinh * 2) * 3.14;
-    document.getElementById('result').innerHTML = 'dien tich la : ' + dienTich + 'chu vi = ' + chuVi;
-}
+<script>
+    function getNumber() {
+        let banKinh = +document.getElementById('banKinh').value;
+        dienTich = (banKinh * banKinh) * 3.14;
+        chuVi = (banKinh * 2) * 3.14;
+        document.getElementById('result').innerHTML = 'dien tich la : ' + dienTich + 'chu vi = ' + chuVi;
+    }
 </script>
 </body>
 </html>

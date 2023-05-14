@@ -9,14 +9,14 @@
 <script>
     let str = prompt('nhap xau ky tu');
 
-    alert(getName(str))
+    alert(getName(str));
 
     function getName(str) {
         let arr = str.toLocaleLowerCase().split(" ");
         let chuSo = [];
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] !== '') {
-                chuSo.push(arr[i])
+                chuSo.push(arr[i]);
             }
         }
         let chuSo2 = [];
@@ -28,7 +28,7 @@
     }
 
     function findMaxLengt(str) {
-        let arr = str.split(" ")
+        let arr = str.split(" ");
         let max = '';
         for (let x = 0; x < arr.length; x++) {
             if (max.length < arr[x].length) {

@@ -1,10 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<button id="bnt-add" onclick="getAdd">them moi hoc vien</button>
+<button id="bnt-edit" onclick="getEdit">sua hoc vien</button>
+<button id="bnt-delete" onclick="getDelete">xoa hoc vien</button>
+<p id="result"></p>
+<script>
+    class student {
+        constructor(id, name, classs, gmail, date, module) {
+            this.id = id;
+            this.name = name;
+            this.classs = classs;
+            this.gmail = gmail;
+            this.date = date;
+            this.module = module;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setClasss(classs) {
+            this.classs = classs;
+        }
+
+        setGmail(gmail) {
+            this.gmail;
+        }
+
+        setDate(date) {
+            this.date = date;
+        }
+
+        setModule(module) {
+            this.module = module;
+        }
+
+        getId(id) {
+            return this.id;
+        }
+
+        getName(name) {
+            return this.name;
+        }
+
+        getClasss(classs) {
+            return this.classs;
+        }
+
+        getGmail(gmail) {
+            return this.gmail;
+        }
+
+        getDate(date) {
+            return this.date;
+        }
+
+        getModule(module) {
+            return this.module;
+        }
+    }
+
+    let studentList = [];
+    let student1 = new student("0001", "Nguyễn Văn A", "C1022G1", "nguyenvana@gmail.com", "12/04/1998", "1");
+    let student2 = new student("0001", "Nguyễn Văn B", "C1022G1", "nguyenvanb@gmail.com", "10/08/1998", "1");
+    let student3 = new student("0001", "Nguyễn Văn C", "C1022G1", "nguyenvanc@gmail.com", "25/01/1998", "1");
+    studentList.push(student1, student2, student3);
+    display(studentList);
+
+    function
+    display(list) {
+        studentList.sort(function (c1, c2) {
+            return c1.id - c2.id
+        })
+            let tableString = '<table border="1" style="border-collapse: collapse">\n' +
+            '   <tr>\n' +
+            '       <th>stt</th>\n' +
+            '       <th>id</th>\n' +
+            '       <th>Name</th>\n' +
+            '       <th>classs</th>\n' +
+            '       <th>gmail</th>\n' +
+            '       <th>date</th>\n' +
+            '       <th>module</th>\n' +
+            '   </tr>';
+        for (let i = 0; i < list.length; i++) {
+            tableString += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + 'HV-' + list[i].getId() + '</td>\n' +
+                '        <td>' + list[i].getName() + '</td>\n' +
+                '        <td>' + list[i].getClasss() + '</td>\n' +
+                '        <td>' + list[i].getGmail() + '</td>\n' +
+                '        <td>' + list[i].getDate() + '</td>\n' +
+                '        <td>' + list[i].getModule() + '</td>\n' +
+                '    </tr>'
+        }
+        tableString += '</table>'
+        document.getElementById('result').innerHTML = tableString;
+    }
+    function getAdd(){
+
+    }
+</script>
 </body>
 </html>

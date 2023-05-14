@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng cac phần tử 2 đường chéo của mảng</title>
+</head>
+<body>
+<script>
+    let m = [
+        [2, 3, 4, 5],
+        [6, 7, 8, 9],
+        [12, 5, 6, 1],
+        [13, 3, 7, 2]
+    ];
+    let tong = 0;
+    for (let i = 0; i < m.length; i++) {
+        for (let j = 0; j < m.length; j++) {
+            if (j === i || i + j === 3) {
+
+             tong=tong+m[i][j];
+            }
+        }
+    }document.write(tong+' la tong cua 2 duong cheo')
+</script>
+</body>
+</html>

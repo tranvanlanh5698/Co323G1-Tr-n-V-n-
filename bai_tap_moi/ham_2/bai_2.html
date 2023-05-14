@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+<script>
+    let x = +prompt('nhao vao canh x');
+    let y = +prompt('nhao vao canh y');
+    let z = +prompt('nhao vao canh x');
+    checkTriangle(x, y, z);
+
+    function checkTriangle(x, y, z) {
+        if (x <= 0 || y <= 0 || z <= 0 && x + y === z || x === y + z || x + z === y) {
+            alert('khong phai tam giac')
+        } else if (x * x === y * y + z * z || x * x === y * y + z * z || x * x === y * y + z * z) {
+            alert('la tam giac vuong')
+        } else {
+            alert('chi la 3 canh cua tam giac')
+        }
+    }
+</script>
+</body>
+</html>

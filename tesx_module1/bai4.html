@@ -1,10 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<p id="result"></p>
+<script>
+    class quanLy {
+        constructor(id, name, date, time, sl) {
+            this.id = id;
+            this.name = name;
+            this.date = date;
+            this.time = time;
+            this.sl = sl;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setDate(date) {
+            this.date = date;
+        }
+
+        setTime(time) {
+            this.time = time;
+        }
+
+        setSl(sl) {
+            this.sl = sl;
+        }
+
+        getId(id) {
+            return this.id;
+        }
+
+        getName(name) {
+            return this.name;
+        }
+
+        getDate(date) {
+            return this.date;
+        }
+
+        getTime(time) {
+            return this.time;
+        }
+
+        getSl(sl) {
+            return this.sl;
+        }
+    }
+
+    let quanLyList = [];
+    let quanLy1 = new quanLy('001','Avatar','12/06/2023','02:00:00','1');
+    let quanLy2 = new quanLy('002','The Terminator','13/06/2023','02:00:00','1');
+    let quanLy3 = new quanLy('003','The Matrix','14/06/2023','02:00:00','1');
+    quanLyList.push(quanLy1, quanLy2, quanLy3);
+    display(quanLyList);
+
+
+    function display(list) {
+        quanLyList.sort(function (c1, c2) {
+            return c1.id - c2.id;
+        })
+
+
+        let tableString = '<table border="1" style="border-collapse: collapse">\n' +
+            '<tr>\n' +
+            '<th>stt</th>\n' +
+            '<th>id</th>\n' +
+            '<th>name</th>\n' +
+            '<th>date</th>\n' +
+            '<th>time</th>\n' +
+            '<th>sl</th>\n' +
+            '</tr>\n'
+        for (let i = 0; i < list.length; i++) {
+            tableString += '<tr>\n' +
+                '<td>' + (i + 1) + '</td>\n' +
+                '<td>' + list[i].getId() + '</td>\n' +
+                '<td>' + list[i].getName() + '</td>\n' +
+                '<td>' + list[i].getDate() + '</td>\n' +
+                '<td>' + list[i].getTime() + '</td>\n' +
+                '<td>' + list[i].getSl() + '</td>\n' +
+                '</tr>'
+        }
+        tableString += '</table>'
+        document.getElementById('result').innerHTML = tableString;
+    }
+</script>
 </body>
 </html>

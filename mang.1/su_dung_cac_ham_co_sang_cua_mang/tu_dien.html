@@ -15,18 +15,17 @@
         let eng = ["number", "one", "two", "three", "four", "five"];
         let viet = ["số", "1", "2", "3", "4", "5"];
         let word = document.getElementById("word").value;
+        let index = -1;
         for (let i = 0; i < eng.length; i++) {
             if (word === eng[i]) {
-                document.getElementById("result").innerHTML = word + "  là " + viet[i];
+                index = i;
                 break;
-            } else {
-                document.getElementById("result").innerHTML = " không có";
             }
         }
-        for (let j = 0; j < viet.length; j++) {
-            if (word === viet[j]) {
-                document.getElementById("result").innerHTML = word + "  là " + eng[j];
-            }
+        if (index === -1) {
+            alert("not found");
+        } else {
+            alert(viet[index]);
         }
     }
 </script>

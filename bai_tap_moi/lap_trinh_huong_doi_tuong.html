@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let result = document.getElementById("result");
+
+    class account {
+        constructor(account, name, money) {
+            this.account = account;
+            this.name = name;
+            this.money = money;
+
+        }
+
+        setAccount(account) {
+            this.account = account;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setMoney(money) {
+            this.money = money;
+        }
+
+        getAccount(account) {
+            return this.account;
+        }
+
+        getName(name) {
+            return this.name;
+        }
+
+        getMoney(money) {
+            return this.money;
+        }
+    }
+
+    let accountList = [];
+    let account1 = new account("100128744444", "Nguyễn Văn A", 100000000);
+    let account2 = new account("100127843746", "Trần Văn Anh", 180000000);
+    let account3 = new account("100122947564", "Lê Huỳnh", 200000000);
+    let account4 = new account("100124283937", "Đào Phương", 503000000);
+    accountList.push(account1, account2, account3, account4);
+    display(accountList);
+
+    function display(list) {
+
+        let tableString = '<table border="1px" style="border-collapse: collapse">\n' +
+            '   <tr>\n' +
+            '       <th>stt</th>\n' +
+            '       <th>account</th>\n' +
+            '       <th>name</th>\n' +
+            '       <th>money</th>\n' +
+            '       <th>withdraw money</th>\n' +
+            '       <th>recharge</th>\n' +
+            '   </tr>';
+        for (let i = 0; i < list.length; i++) {
+            tableString += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + list[i].getAccount() + '</td>\n' +
+                '        <td>' + list[i].getName() + '</td>\n' +
+                '        <td>' + list[i].getMoney() + '</td>\n' +
+                '        <td>' + '<button type="button" onclick="getNumber(' + i + ')">nap tien</button>' + '</td>\n' +
+                '        <td>' + '<button type="button" onclick="getAdd(' + i + ')">rut tien</button> ' + '</td>\n' +
+                '        </tr>'
+
+        }
+        tableString += '</table>\n'
+        result.innerHTML = tableString;
+    }
+
+    function getNumber(i) {
+        let moneyAdd = +prompt('nhap so tien can nap');
+        accountList[i].setMoney(accountList[i].money + moneyAdd);
+        display(accountList)
+    }
+    function getAdd(i) {
+        let moneyNum = +prompt('nhap tien can rut');
+            accountList[i].setMoney(accountList[i].money - moneyNum);
+            display(accountList)
+    }
+</script>
+</body>
+</html>

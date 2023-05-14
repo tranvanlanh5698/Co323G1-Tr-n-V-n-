@@ -6,40 +6,37 @@
 </head>
 <body>
 <form>
-    <table>
     <h1>Caculator</h1>
-       <laber><input id="num1" type="number"></laber>
-       <laber><input id="num2" type="number"></laber>
-       <button id="sub" type="button" onclick="subnumber()">Subtraction(+)</button>
-       <button id="div" type="button" onclick="divnumber()">Division(-)</button>
-       <button id="nul" type="button" onclick="nulnumber()">Nultiplication(*)</button>
-       <button id="add" type="button" onclick="addnumber()">Addition(/)</button>
+       <laber><input id="num1" type="number" placeholder="nhap a"></laber>
+       <laber><input id="num2" type="number" placeholder="nhap b"></laber>
+       <button id="sub" type="button" onclick="subNumber()">Subtraction(+)</button>
+       <button id="div" type="button" onclick="divNumber()">Division(-)</button>
+       <button id="nul" type="button" onclick="nulNumber()">Nultiplication(*)</button>
+       <button id="add" type="button" onclick="addNumber()">Addition(/)</button>
     <h2>Result</h2>
     <div id="Result">kết quả</div>
-
-    </table>
 </form>
 </body>
 <script>
-    function subnumber(){
+    function subNumber(){
         let num1=+document.getElementById('num1').value;
         let num2=+document.getElementById('num2').value;
-        let a= num1+num2;
-        document.getElementById('Result').innerText = a;
+        let sum= num1+num2;
+        document.getElementById('Result').innerText =sum;
     }
-    function divnumber(){
+    function divNumber(){
         let num1=+document.getElementById('num1').value;
         let num2=+document.getElementById('num2').value;
         let  tru= num1-num2;
         document.getElementById('Result').innerText = tru ;
     }
-    function nulnumber(){
+    function nulNumber(){
         let num1=+document.getElementById('num1').value;
         let num2=+document.getElementById('num2').value;
         let nhan= num1*num2;
         document.getElementById('Result').innerText = nhan;
     }
-    function addnumber(){
+    function addNumber(){
         let num1=+document.getElementById('num1').value;
         let num2=+document.getElementById('num2').value;
         let chia= num1/num2;

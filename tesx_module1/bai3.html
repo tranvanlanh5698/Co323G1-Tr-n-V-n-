@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
 </head>
 <body>
-$END$
+<script>
+    let str = prompt('nhap ky tu');
+    getCharacters(str);
+
+    function getCharacters(str) {
+        let array = str.split("");
+        let arr = [];
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === array[i -1] ) {
+                arr.push(array[i]);
+
+            }
+        }
+        alert(arr.length)
+    }
+</script>
 </body>
 </html>

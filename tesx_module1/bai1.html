@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>bai 1</title>
 </head>
 <body>
+<script>
+     let arr=[1,2,3,4,55,5,6,7,7,8,55];
+    function setNumber(arr) {
+        arr.sort(function (x, y) {
+            return x - y;
+        });
+        let so = [arr[0]];
+        let result = [];
 
+        for (let j = 1; j < arr.length; j++) {
+            if (arr[j - 1] !== arr[j]) {
+                so.push(arr[j]);
+            }
+        }
+        result.push(so[so.length - 2]);
+        return result.join(',');
+    }
+
+    document.write(setNumber(arr));
+
+</script>
 </body>
 </html>

@@ -8,23 +8,25 @@
 <script>
 
     getNumber();
-    function getNumber(){
+
+    function getNumber() {
         let m = +prompt('nhap mang');
-        if (m%2===0){
-        let n=[];
-        for (let i = 0; i < m; i++) {
-            n.push(+prompt('nhap vi tri cua phan tu thu'+(i+1)))
-        }
-        for (let i = 0; i < n.length/2; i++) {
-            if (Math.pow(n[i+n.length/2],2)===n[i]){
-                alert('true');
+        if (m % 2 === 0) {
+            let n = [];
+            for (let i = 0; i < m; i++) {
+                n.push(+prompt('nhap vi tri cua phan tu thu' + (i + 1)))
+            }
+            for (let i = 0; i < n.length / 2; i++) {
+                if (Math.pow(n[i + n.length / 2], 2) === n[i]) {
+                    alert('true');
+                    break;
+                } else {
+                    alert('false');
+                }
                 break;
-            }else {
-                alert('false');
-            }break;
-        }
-    }else {
-            alert('nhap lai')
+            }
+        } else {
+            alert('nhap lai');
         }
     }
 </script>

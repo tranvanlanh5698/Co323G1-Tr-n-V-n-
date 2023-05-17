@@ -6,22 +6,24 @@
 </head>
 <body>
 <script>
-    let str =prompt("nhap chuoi ky tu");
+    let str = prompt("nhap chuoi ky tu");
     checkString(str);
-    function checkString(){
-        let arr=str.split('');
-        let hoa=0;
-        let thuong=0;
+
+    function checkString() {
+        let arr = str.split('');
+        let hoa = 0;
+        let thuong = 0;
         for (let i = 0; i < arr.length; i++) {
-            if (arr[i]===arr[i].toUpperCase()){
+            if (arr[i] === arr[i].toUpperCase()) {
                 hoa++;
-            }else if(arr[i]===arr[i].toLowerCase()){
+            } else if (arr[i] === arr[i].toLowerCase()) {
                 thuong++;
             }
-        }if (hoa===thuong){
-            alert("true")
-        }else {
-            alert("false")
+        }
+        if (hoa === thuong) {
+            alert("true");
+        } else {
+            alert("false");
         }
     }
 </script>

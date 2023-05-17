@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>bai 4</title>
 </head>
 <body>
-$END$
+<script>
+    let str =prompt("nhap chuoi ky tu");
+    checkString(str);
+    function checkString(){
+        let arr=str.split('');
+        let hoa=0;
+        let thuong=0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i]===arr[i].toUpperCase()){
+                hoa++;
+            }else if(arr[i]===arr[i].toLowerCase()){
+                thuong++;
+            }
+        }if (hoa===thuong){
+            alert("true")
+        }else {
+            alert("false")
+        }
+    }
+</script>
 </body>
 </html>

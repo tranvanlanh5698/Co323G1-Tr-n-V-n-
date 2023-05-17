@@ -72,19 +72,19 @@
                 '        </tr>'
 
         }
-        tableString += '</table>\n'
+        tableString += '</table>\n';
         result.innerHTML = tableString;
     }
 
     function getNumber(i) {
         let moneyAdd = +prompt('nhap so tien can nap');
         accountList[i].setMoney(accountList[i].money + moneyAdd);
-        display(accountList)
+        display(accountList);
     }
     function getAdd(i) {
         let moneyNum = +prompt('nhap tien can rut');
             accountList[i].setMoney(accountList[i].money - moneyNum);
-            display(accountList)
+            display(accountList);
     }
 </script>
 </body>

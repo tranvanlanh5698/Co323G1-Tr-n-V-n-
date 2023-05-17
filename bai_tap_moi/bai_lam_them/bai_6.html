@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>bai 6</title>
 </head>
 <body>
-$END$
+<script>
+    let str = prompt("nhap chuoi ky tu");
+    checkString(str);
+
+    function checkString(str) {
+        let arr = str.split('');
+        let a = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === "o" || arr[i] === "a" || arr[i] === "i" || arr[i] === "e" || arr[i] === "u" ||
+                arr[i] === "A" || arr[i] === "E" || arr[i] === "O" || arr[i] === "I" || arr[i] === "U") {
+                a.push(arr[i]);
+
+            }
+        } document.write(a + 'là nguyên âm');
+
+
+    }
+</script>
 </body>
 </html>

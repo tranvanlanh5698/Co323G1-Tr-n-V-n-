@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>bai 7</title>
 </head>
 <body>
-$END$
+<script>
+    alert(Math.floor(29/10))
+    let number = prompt("nhap do dai mang");
+    getNumber(number);
+
+    function getNumber() {
+        let num = [];
+        let number1 = [];
+        for (let i = 0; i < number; i++) {
+            num.push(+prompt('nhap vi tri thu ' + (i + 1)))
+        }
+        if (num < 10 || num > 100) {
+            alert("nhap lai");
+        } else {
+            for (let i = 0; i < num.length; i++) {
+                if (num[i] % 10 > Math.floor(num[i] / 10)) {
+                    number1.push(num[i]);
+                }
+            }
+            document.write(number1 + '')
+        }
+    }
+</script>
 </body>
 </html>

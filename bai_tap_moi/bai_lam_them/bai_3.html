@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
 </head>
 <body>
-$END$
+<script>
+    let m = prompt('nhap mang');
+    let n = m.split('');
+    alert(n);
+    let flag = false;
+    let flag2 = false;
+    for (let i = 0; i < n.length - 1; i++) {
+        if (n[i] < n[i + 1]) {
+            flag = true;
+        }
+        if (n[i] > n[i + 1]) {
+            flag2 = true;
+        }
+
+    }
+    if (flag === true && flag2 === true) {
+        alert("no");
+    } else if (flag === true && flag2 === false) {
+        alert('ok');
+    } else if (flag === false && flag2 === true) {
+        alert('ok');
+    }
+
+</script>
 </body>
 </html>

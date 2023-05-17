@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>bai 9</title>
 </head>
 <body>
-$END$
+<script>
+    let number = prompt('nhap vao do dai cua mang');
+    getNumber();
+
+    function getNumber() {
+        let num = [];
+        let sum = 0;
+        let count = 0;
+        for (let i = 0; i < number; i++) {
+            num.push(+prompt("nhap vi tri thu" + (i + 1)));
+        }
+        for (let i = 0; i < num.length; i++) {
+            sum += num[i];
+        }
+        let tong = sum / num.length;
+        for (let i = 0; i < num.length; i++) {
+            if (tong === num[i]) {
+                count++;
+            }
+        }
+        document.write("trung binh = " + tong + "=>" + tong + ' xuat hien: ' + count + 'lan');
+    }
+</script>
 </body>
 </html>

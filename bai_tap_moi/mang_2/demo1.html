@@ -6,7 +6,27 @@
 </head>
 <body>
 <script>
+    do {
+        for (let i = 0; i < num.length; i++) {
+            if (num[i] === 2 || num[i] === 3) {
 
+            } else {
+                let count2 = 0;
+                for (let i = 1; i <= num; i++) {
+                    if (num % i === 0) {
+                        count2++;
+                    }
+                }
+                if (count2 === 2) {
+                    alert( ' true');
+                    break;
+                } else {
+                    alert( 'false');
+                }
+
+            }
+        }
+    } while (num < 1)
 
 </script>
 </body>

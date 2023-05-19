@@ -15,7 +15,13 @@
         let year = datestring.substring(6, 10);
         let a = datestring.substring(2, 3);
         let b = datestring.substring(5, 6);
-    }
+        if (day === isNaN && day < 1 && day > 31 || month === isNaN && month < 1 && month > 12 || year === isNaN &&
+            year < 1 && year > 9999 || a !== "/" || b !== "/"){
+            alert("sai định dạng");
+        }else {
+            alert("đúng định dạng");
+        }
+            }
 
 
 </script>

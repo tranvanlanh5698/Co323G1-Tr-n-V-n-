@@ -6,28 +6,26 @@
 </head>
 <body>
 <script>
-    let num = prompt('nhap vao mot so');
+    let number = +prompt("Nhập độ dài của dãy số");
+    findMaxNumber();
 
-    findMaxNumber(num);
-
-    function findMaxNumber(num) {
-
-        let a = num.split("");
-        for (let i = 0; i < a.length; i++) {
-            if (a.length <= 0 || a.length > 4) {
-                alert('nhap lai so moi');
-            } else {
-                if (parseInt(a[i]) < parseInt(a[i + 1])) {
-                    a.splice(i, 1);
-
-                    alert(b.join(''));
-                    break;
-                } else if (i === a.length - 2) {
-                    a.splice(a.length - 1);
-                    alert(b.join(''));
-                }
+    function findMaxNumber() {
+        let arr = [];
+        if (number === 4){
+            for (let i = 0; i < number; i++) {
+                arr.push(+prompt("Nhập số thứ " + (i + 1)));
             }
+        }else {
+            return -1;
         }
+        let num = +prompt("Nhập vị trí mà bạn muốn xóa");
+        arr.splice(n, 1);
+
+        arr.sort(function (a,b) {
+            return b - a;
+        })
+        document.write("Vị trí xóa là : " +"[ "+ num+" ]"+"<br>");
+        document.write("Số lớn nhất sau khi xóa phần tử tại vị trí n là :" + arr);
     }
 </script>
 </body>

@@ -1,10 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>bai 13</title>
 </head>
 <body>
-$END$
+<script>
+    let number = prompt("nhap do dai mang");
+    getNumber();
+
+    function getNumber() {
+        let n = [];
+        for (let i = 0; i < number; i++) {
+            n.push(+prompt("nhap vi tri thu" + (i + 1)));
+        }
+        for (let i = 0; i < n.length; i++) {
+            if (n[i] <= 1) {
+                alert('NO');
+                break;
+            } else if (n[i] === 2 || n[i] === 3) {
+                alert('OK');
+                break;
+            } else {
+                let flag = false;
+                let count = 0;
+                if (n[i] % i === 0) {
+                    count++;
+                }
+                if (count === 2) {
+                    alert('OK');
+                    break;
+                } else {
+                    alert('NO');
+                }
+                flag = true;
+            }
+            if (flag === true) {
+                alert('OK');
+                break;
+            } else {
+                alert('NO');
+            }
+        }
+
+    }
+
+</script>
 </body>
 </html>

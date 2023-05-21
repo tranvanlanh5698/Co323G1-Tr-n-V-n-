@@ -6,27 +6,29 @@
 </head>
 <body>
 <script>
-    let number = +prompt("Nhập độ dài của dãy số");
+    let number = +prompt("nhap do dai mang");
     findMaxNumber();
 
     function findMaxNumber() {
         let arr = [];
-        if (number === 4){
+        if (number === 4) {
             for (let i = 0; i < number; i++) {
-                arr.push(+prompt("Nhập số thứ " + (i + 1)));
+                arr.push(+prompt("nhap vi tri thu " + (i + 1)));
             }
-        }else {
+        } else {
             return -1;
         }
-        let num = +prompt("Nhập vị trí mà bạn muốn xóa");
-        arr.splice(n, 1);
-
-        arr.sort(function (a,b) {
+        document.write("mang truoc khi xoa " + arr + "<br>");
+        let num = +prompt("vi tri muon xoa");
+        arr.splice(num, 1);
+        arr.sort(function (a, b) {
             return b - a;
         })
-        document.write("Vị trí xóa là : " +"[ "+ num+" ]"+"<br>");
-        document.write("Số lớn nhất sau khi xóa phần tử tại vị trí n là :" + arr);
+        document.write("vi tri xoa la: " + "[ " + num + " ]" + "<br>");
+        document.write("so lon nhat sau khi xoa phan tu bat ky :" + arr);
     }
+
+
 </script>
 </body>
 </html>

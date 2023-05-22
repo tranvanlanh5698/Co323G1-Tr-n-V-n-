@@ -7,20 +7,20 @@
 <body>
 <script>
     let num = +prompt("nhap do dai");
-    getNumber();
-    function getNumber() {
-        let num1 = [];
-        for (let i = 0; i < num; i++) {
-            num1.push(+prompt('nhap so' + (i + 1)));
-        }
+    let num1 = [];
+    for (let i = 0; i < num; i++) {
+        num1.push(+prompt('nhap so' + (i + 1)));
+    }
+    getNumber(num1);
+
+    function getNumber(number) {
         let flgChan = false;
         let flgLe = false;
-
-        for (let i = 0; i < num1.length; i++) {
-            if (num1[i] % 2 !== 0) {
+        for (let i = 0; i < number.length; i++) {
+            if (number[i] % 2 !== 0) {
                 flgLe = true;
             }
-            if (num1[i] % 2 === 0) {
+            if (number[i] % 2 === 0) {
                 flgChan = true;
             }
         }
@@ -32,7 +32,6 @@
             alert('0');
         }
     }
-
 
 
 </script>

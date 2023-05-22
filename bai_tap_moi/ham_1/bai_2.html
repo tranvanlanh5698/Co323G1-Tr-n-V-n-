@@ -6,22 +6,20 @@
 </head>
 <body>
 <script>
-    let m = prompt('nhap do dai mang');
+    let str = prompt('nhap do dai mang');
+    let n = [];
+    for (let i = 0; i < str; i++) {
+        n.push(prompt('nhap ky tu' + (i + 1)))
+    }
+    getSelection(n);
 
-    getSelection();
-
-    function getSelection() {
-        let n = [];
-        for (let i = 0; i < m; i++) {
-            n.push(prompt('nhap ky tu' + (i + 1)))
-        }
+    function getSelection(arr) {
         let flagSo = false;
         let flagChu = false;
-        for (let i = 0; i < n.length; i++) {
-            if (!isNaN(n[i])) {
+        for (let i = 0; i < arr.length; i++) {
+            if (!isNaN(arr[i])) {
                 flagSo = true;
-
-            } else if (isNaN(n[i])) {
+            } else if (isNaN(arr[i])) {
                 flagChu = true;
             }
         }

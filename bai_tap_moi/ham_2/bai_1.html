@@ -7,17 +7,18 @@
 <body>
 <script>
     let m = +prompt('nhap do dai mang');
-    getNumber();
+    let n = [];
+    for (let i = 0; i < m; i++) {
+        n.push(+prompt('nhap so' + (i+1)));
+    }
+    getNumber(n);
 
-    function getNumber() {
-        let n = [];
-        for (let i = 0; i < m; i++) {
-            n.push(+prompt('nhap so' + (i+1)))
-        }
+    function getNumber(num) {
+
         let flg = false;
-        let number = n[1] - n[0];
-        for (let i = 0; i < n.length - 1; i++) {
-            if (n[i + 1] - n[i] === number) {
+        let number = num[1] - num[0];
+        for (let i = 0; i < num.length - 1; i++) {
+            if (num[i + 1] - num[i] === number) {
                 flg = true;
 
             } else {

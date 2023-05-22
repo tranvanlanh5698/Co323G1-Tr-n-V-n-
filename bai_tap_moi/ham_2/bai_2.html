@@ -11,10 +11,10 @@
     let z = +prompt('nhao vao canh x');
     checkTriangle(x, y, z);
 
-    function checkTriangle(x, y, z) {
-        if (x <= 0 || y <= 0 || z <= 0 && x + y === z || x === y + z || x + z === y) {
+    function checkTriangle(a, b, c) {
+        if (a <= 0 || b <= 0 || c <= 0 && a + b === c || a === b + c || a + c === b) {
             alert('khong phai tam giac');
-        } else if (x * x === y * y + z * z || x * x === y * y + z * z || x * x === y * y + z * z) {
+        } else if (a * a === b * b + c * c || a * a + b * b === c * c || a * a + c * c === b * b) {
             alert('la tam giac vuong');
         } else {
             alert('chi la 3 canh cua tam giac');

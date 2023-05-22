@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 19</title>
+</head>
+<body>
+<script>
+    let number = prompt("nhap do dai mang");
+    checkNumber();
+
+    function checkNumber() {
+        let num = [];
+        for (let i = 0; i < number; i++) {
+            num.push(+prompt("nhap vi tri thu " + (i + 1)))
+        }
+        document.write("mang truoc khi cong" + num + "<br\>");
+        let tong = 0;
+        for (let i = 1; i <= num.length; i += 2) {
+            if (num[i] % 2 === 0) {
+                tong += num[i];
+            }
+        }
+        document.write("tong so chan o vi tri le la: " + tong);
+    }
+</script>
+</body>
+</html>

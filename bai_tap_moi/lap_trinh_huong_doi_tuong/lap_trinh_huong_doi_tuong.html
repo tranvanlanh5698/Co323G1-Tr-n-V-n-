@@ -7,9 +7,9 @@
 <body>
 <p id="result"></p>
 <script>
-    let result = document.getElementById("result");
+    //let result = document.getElementById("result");
 
-    class account {
+    class checkAccount {
         constructor(account, name, money) {
             this.account = account;
             this.name = name;
@@ -43,10 +43,10 @@
     }
 
     let accountList = [];
-    let account1 = new account("100128744444", "Nguyễn Văn A", 100000000);
-    let account2 = new account("100127843746", "Trần Văn Anh", 180000000);
-    let account3 = new account("100122947564", "Lê Huỳnh", 200000000);
-    let account4 = new account("100124283937", "Đào Phương", 503000000);
+    let account1 = new checkAccount("100128744444", "Nguyễn Văn A", 100000000);
+    let account2 = new checkAccount("100127843746", "Trần Văn Anh", 180000000);
+    let account3 = new checkAccount("100122947564", "Lê Huỳnh", 200000000);
+    let account4 = new checkAccount("100124283937", "Đào Phương", 503000000);
     accountList.push(account1, account2, account3, account4);
     display(accountList);
 

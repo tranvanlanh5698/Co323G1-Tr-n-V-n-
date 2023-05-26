@@ -8,8 +8,8 @@
 
 <script>
     let str = prompt('nhap xau ky tu');
-
-    alert(getName(str));
+    document.write("xau truoc khi chuan hoa: " + str + "<br>");
+    document.write("xau sau khi chuyen hoa: " + getName(str) + "<br>");
 
     function getName(str) {
         let arr = str.toLocaleLowerCase().split(" ");
@@ -38,7 +38,7 @@
         return max;
     }
 
-    alert(findMaxLengt(str));
+    document.write("chu dai nhat la: " + findMaxLengt(str));
 </script>
 </body>
 </html>

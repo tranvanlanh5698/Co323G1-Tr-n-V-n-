@@ -15,28 +15,33 @@
             number[i][j] = prompt('nhap phan tu thu' + j + 'cua mang' + i);
         }
     }
-    function maxNumber(number){
-    let max=number[0][0];
-        for (let i = 0; i <number.length ; i++) {
+
+    function maxNumber(number) {
+        let max = number[0][0];
+        for (let i = 0; i < number.length; i++) {
             for (let j = 0; j < number[i].length; j++) {
-                if (max<number[i][j]){
-                    max=number[i][j];
+                if (max < number[i][j]) {
+                    max = number[i][j];
                 }
             }
-        }return max;
+        }
+        return max;
     }
-    function minNumber(number){
-        let min=number[0][0];
-        for (let i = 0; i <number.length ; i++) {
+
+    function minNumber(number) {
+        let min = number[0][0];
+        for (let i = 0; i < number.length; i++) {
             for (let j = 0; j < number[i].length; j++) {
-                if (min>number[i][j]){
-                    min=number[i][j];
+                if (min > number[i][j]) {
+                    min = number[i][j];
                 }
             }
-        }return min;
+        }
+        return min;
     }
-    alert("so lon nhat la: "+maxNumber(number));
-    alert("so be nhat la: "+minNumber(number))
+
+    alert("so lon nhat la: " + maxNumber(number));
+    alert("so be nhat la: " + minNumber(number));
 </script>
 </body>
 </html>

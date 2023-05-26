@@ -71,8 +71,8 @@
     }
 
     let studentList = [];
-    let student1 = new student("0001", "Nguyễn Văn A", "C1022G1", "nguyenvana@gmail.com", "12/4/1998", "1");
-    let student2 = new student("0002", "Nguyễn Văn B", "C1022G1", "nguyenvanb@gmail.com", "2/7/1996", "1");
+    let student1 = new student("0001", "Nguyễn Văn A", "C1022G1", "nguyenvana@gmail.com", "12/04/1998", "1");
+    let student2 = new student("0002", "Nguyễn Văn B", "C1022G1", "nguyenvanb@gmail.com", "2/07/1996", "1");
     let student3 = new student("0003", "Nguyễn Văn C", "C1022G1", "nguyenvanc@gmail.com", "20/10/1999", "1");
     studentList.push(student1, student2, student3);
     display(studentList);
@@ -107,6 +107,20 @@
         document.getElementById('result').innerHTML = tableString;
     }
 
+    function checkDate(date) {
+        let day = date.substring(0, 2);
+        let month = date.substring(3, 5);
+        let year = date.substring(6, 10);
+        let a = date.substring(2, 3);
+        let b = date.substring(5, 6);
+        if (day === isNaN && day < 1 && day > 31 || month === isNaN && month < 1 && month > 12 || year === isNaN &&
+            year < 1 && year > 9999 || a !== "/" || b !== "/") {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     function getAdd() {
         let id;
         let checkNum;
@@ -114,8 +128,8 @@
         do {
             id = prompt('nhập id ');
             checkNum = isNaN(id);
-            checkLength = id.length===4;
-        } while (checkNum||!checkLength);
+            checkLength = id.length === 4;
+        } while (checkNum || !checkLength);
         let name;
         do {
             name = prompt('nhập tên');
@@ -123,7 +137,11 @@
 
         let classs = prompt('nhập lớp');
         let gmail = prompt('nhập gmail');
-        let date = prompt('nhập ngày tháng năm sinh');
+        let date;
+        do {
+            date = prompt('nhập ngày tháng năm sinh');
+
+        } while (!checkDate(date));
 
         let module;
         do {
@@ -134,6 +152,7 @@
         studentList.push(newStudent);
         display(studentList);
     }
+
     function getDelete() {
         let id = prompt('nhập id muốn xóa');
         let flag = false;
@@ -149,7 +168,7 @@
             let conf = confirm("bạn có muốn xóa học viên không???");
             if (conf) {
                 studentList.splice(index, 1);
-            }else {
+            } else {
                 alert('id không tồn tại');
             }
         }
@@ -177,11 +196,13 @@
                 if (gmail !== '') {
                     studentList[i].setGmail(gmail);
                 }
-                let date = prompt('nhập ngày tháng năm sinh');
-                if (date !== '') {
-                    studentList[i].setDate(date);
-                }
-                let module = prompt('nhập ngày tháng năm sinh');
+                let date
+                do {
+                    date = prompt('nhập ngày tháng năm sinh');
+                } while (!checkDate(date));
+                studentList[i].setDate(date);
+
+                let module = prompt('nhap module');
                 if (module !== '') {
                     studentList[i].setModule(module);
                 }
@@ -189,8 +210,6 @@
             display(studentList);
         }
     }
-
-
 </script>
 </body>
 </html>

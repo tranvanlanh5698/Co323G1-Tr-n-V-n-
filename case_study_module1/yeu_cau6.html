@@ -44,36 +44,37 @@
             this.module = module;
         }
 
-        getId(id) {
+        getId() {
             return this.id;
         }
 
-        getName(name) {
+        getName() {
             return this.name;
         }
 
-        getClasss(classs) {
+        getClasss() {
             return this.classs;
         }
 
-        getGmail(gmail) {
+        getGmail() {
             return this.gmail;
         }
 
-        getDate(date) {
+        getDate() {
             return this.date;
         }
 
-        getModule(module) {
+        getModule() {
             return this.module;
         }
 
     }
 
     let studentList = [];
-    let student1 = new student("0001", "Nguyễn Văn A", "C1022G1", "nguyenvana@gmail.com", "12/04/1998", "1");
-    let student2 = new student("0002", "Nguyễn Văn B", "C1022G1", "nguyenvanb@gmail.com", "2/07/1996", "1");
-    let student3 = new student("0003", "Nguyễn Văn C", "C1022G1", "nguyenvanc@gmail.com", "20/10/1999", "1");
+    let countId = 0;
+    let student1 = new student(checkId(++countId), "Nguyễn Văn A", "C1022G1", "nguyenvana@gmail.com", "12/04/1998", "1");
+    let student2 = new student(checkId(++countId), "Nguyễn Văn B", "C1022G1", "nguyenvanb@gmail.com", "2/07/1996", "1");
+    let student3 = new student(checkId(++countId), "Nguyễn Văn C", "C1022G1", "nguyenvanc@gmail.com", "20/10/1999", "1");
     studentList.push(student1, student2, student3);
     display(studentList);
 
@@ -121,15 +122,15 @@
         }
     }
 
+    function checkId(a) {
+        let preId = "";
+        for (let i = 4; i > (a + '').length; i--) {
+            preId += "0"
+        }
+        return preId + a
+    }
+
     function getAdd() {
-        let id;
-        let checkNum;
-        let checkLength;
-        do {
-            id = prompt('nhập id ');
-            checkNum = isNaN(id);
-            checkLength = id.length === 4;
-        } while (checkNum || !checkLength);
         let name;
         do {
             name = prompt('nhập tên');
@@ -148,7 +149,7 @@
             module = +prompt('nhap module');
         } while (0 > module || module > 6);
 
-        let newStudent = new student(id, name, classs, gmail, date, module);
+        let newStudent = new student(checkId(++count), name, classs, gmail, date, module);
         studentList.push(newStudent);
         display(studentList);
     }
@@ -164,13 +165,13 @@
                 break;
             }
         }
-        if (flag) {
+        if (flag === true) {
             let conf = confirm("bạn có muốn xóa học viên không???");
             if (conf) {
                 studentList.splice(index, 1);
-            } else {
-                alert('id không tồn tại');
             }
+        } else {
+            alert('id không tồn tại');
         }
         display(studentList);
     }

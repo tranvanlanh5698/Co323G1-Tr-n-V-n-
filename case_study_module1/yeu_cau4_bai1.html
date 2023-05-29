@@ -30,12 +30,18 @@
     function findMaxLengt(str) {
         let arr = str.split(" ");
         let max = '';
+        let a = [];
         for (let x = 0; x < arr.length; x++) {
             if (max.length < arr[x].length) {
                 max = arr[x];
             }
         }
-        return max;
+        for (let i = 0; i < arr.length; i++) {
+           if(max.length===arr[i].length){
+               a.push(arr[i])
+           }
+        }
+        return a;
     }
 
     document.write("chu dai nhat la: " + findMaxLengt(str));

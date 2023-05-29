@@ -94,13 +94,13 @@
             '   </tr>';
         for (let i = 0; i < list.length; i++) {
             tableString += '<tr>\n' +
-                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td style="text-align: center">' + (i + 1) + '</td>\n' +
                 '        <td>' + 'HV-' + list[i].getId() + '</td>\n' +
                 '        <td>' + list[i].getName() + '</td>\n' +
                 '        <td>' + list[i].getClasss() + '</td>\n' +
                 '        <td>' + list[i].getGmail() + '</td>\n' +
                 '        <td>' + list[i].getDate() + '</td>\n' +
-                '        <td>' + list[i].getModule() + '</td>\n' +
+                '        <td style="text-align: center">' + list[i].getModule() + '</td>\n' +
                 '    </tr>'
         }
         tableString += '</table>'

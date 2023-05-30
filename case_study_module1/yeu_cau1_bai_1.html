@@ -16,15 +16,15 @@
         if (number1 <= 7000000) {
             let thue = ((number1 * 5) / 100);
             let luongRong = number1 - thue;
-            document.getElementById('result').innerHTML = "thue la: " + thue + 'vnd' + 'luong rong la: ' + luongRong + 'vnd';
+            document.getElementById('result').innerHTML = "thue la: " + thue + 'vnd' +"<br\>"+ 'luong rong la: ' + luongRong + 'vnd';
         } else if (number1 <= 15000000) {
             let thue = ((number1 * 10) / 100);
             let luongRong = number1 - thue;
-            document.getElementById('result').innerHTML = thue + 'vnd' + 'luong rong la: ' + luongRong + 'vnd';
+            document.getElementById('result').innerHTML = thue + 'vnd' +"<br\>"+ 'luong rong la: ' + luongRong + 'vnd';
         } else if (number1 > 15000000) {
             let thue = ((number1 * 20) / 100);
             let luongRong = number1 - thue;
-            document.getElementById('result').innerHTML = thue + 'vnd' + 'luong rong la: ' + luongRong + 'vnd';
+            document.getElementById('result').innerHTML = thue + 'vnd' +"<br\>"+ 'luong rong la: ' + luongRong + 'vnd';
         }
     }
 

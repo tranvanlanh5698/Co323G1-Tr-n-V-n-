@@ -13,16 +13,16 @@
     function getCharacters(s1, s2) {
         let arr = s1.split("");
         let array = s2.split("");
-        let s3 = [];
+        let count =0;
         for (let i = 0; i < arr.length; i++) {
             for (let j = 0; j < array.length; j++) {
-                if (arr[i] === array[j]) {
-                    s3.push(arr[i]);
-                    arr.splice(i);
+                if (arr[i] !== array[j]) {
+                  arr.splice(arr[i],1);
+                  array.splice(array[j],1);
+                  count++
                 }
             }
-        }
-        alert(s3.length);
+        }alert(count);
     }
 </script>
 </body>

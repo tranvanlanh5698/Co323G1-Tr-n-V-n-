@@ -149,7 +149,7 @@
             module = +prompt('nhap module');
         } while (0 > module || module > 6);
 
-        let newStudent = new student(checkId(++count), name, classs, gmail, date, module);
+        let newStudent = new student(checkId(++countId), name, classs, gmail, date, module);
         studentList.push(newStudent);
         display(studentList);
     }
